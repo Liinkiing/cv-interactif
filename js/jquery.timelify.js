@@ -1,5 +1,11 @@
+$.fn.timelify = function(options){
 
-$.fn.timelify = function(){
+	var settings = $.extend({
+		animLeft: "bounceInLeft",
+		animRight: "bounceInRight",
+		animCenter: "bounceInUp"
+	}, options);
+
 	var timeline_items = $(this).find('.timeline-items li');
 
 	window.addEventListener('scroll', function(){
@@ -8,13 +14,13 @@ $.fn.timelify = function(){
 				$(this).removeClass('is-hidden').addClass('animated');
 				if (!$(this).hasClass('inverted')) {
 					if ($(this).hasClass('centered')) {
-						$(this).addClass('bounceInUp')
+						$(this).addClass(settings.animCenter)
 					} else {
-						$(this).addClass('bounceInLeft')
+						$(this).addClass(settings.animLeft)
 					}
 				} else {
 
-					$(this).addClass('bounceInRight')
+					$(this).addClass(settings.animRight)
 
 				}
 			}

@@ -14,7 +14,11 @@ var main = function () {
 
 		}
 
-		$('.timeline').timelify();
+		$('.timeline').timelify({
+			animLeft: "fadeInLeft",
+			animRight: "fadeInRight",
+			animCenter: "fadeInUp"
+		});
 	});
 
 
