@@ -48,6 +48,10 @@
         visibility: hidden; }
       .timeline .timeline-items .timeline-item a {
         font-weight: 700; }
+      .timeline .timeline-items .timeline-item time::before {
+        font-family: FontAwesome, sans-serif;
+        content: '\f017';
+        margin-right: 10px; }
       .timeline .timeline-items .timeline-item::before {
         content: '';
         width: 0;

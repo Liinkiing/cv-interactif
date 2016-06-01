@@ -1,7 +1,5 @@
 var main = function () {
 
-	var timeline_items = $('.timeline-items li');
-
 	$(document).scroll(function () {
 		var scrollPos = $(window).scrollTop();
 		console.log(scrollPos);
