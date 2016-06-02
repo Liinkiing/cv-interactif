@@ -2,7 +2,6 @@ var main = function () {
 
 	$(document).scroll(function () {
 		var scrollPos = $(window).scrollTop();
-		console.log(scrollPos);
 		var header = $('header');
 		if (scrollPos > 50) {
 			$(header).addClass('collapsed');
@@ -14,13 +13,16 @@ var main = function () {
 
 		}
 
-		$('.timeline').timelify({
-			animLeft: "fadeInLeft",
-			animRight: "fadeInRight",
-			animCenter: "fadeInUp"
-		});
+
 	});
 
+	$('.timeline').timelify({
+		animLeft: "fadeInLeft",
+		animRight: "fadeInRight",
+		animCenter: "fadeInUp",
+		animSpeed: 600,
+		offset: 150
+	});
 
 };
 
