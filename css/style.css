@@ -178,7 +178,9 @@ header {
       height: 50px; }
     .conversation .message .message-content {
       width: calc(100% - 105px);
-      display: flex; }
+      display: flex;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
       .conversation .message .message-content p {
         margin: auto 0;
         padding: 20px; }
@@ -186,8 +188,7 @@ header {
       padding-left: 20px;
       margin-right: 40px;
       color: white;
-      background: #00acc1;
-      border: 1px solid #28e8ff; }
+      background: #00acc1; }
       .conversation .message:nth-of-type(2n) .message-content a {
         color: #002428; }
       .conversation .message:nth-of-type(2n) .message-content::after, .conversation .message:nth-of-type(2n) .message-content ::before {
@@ -214,8 +215,7 @@ header {
       margin-left: 40px;
       padding-left: 20px;
       color: white;
-      background: #e57373;
-      border: 1px solid #f5c9c9; }
+      background: #e57373; }
       .conversation .message:nth-of-type(2n+1) .message-content a {
         transition: all 0.3s;
         color: #761616;
