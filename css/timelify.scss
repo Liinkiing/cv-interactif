@@ -109,7 +109,11 @@
                 }
 
                 & a {
+                    transition : all 0.3s;
                     color: #1759a2;
+                    &:hover {
+                        color: #10376a;
+                    }
                 }
                 &::before {
                     border-top: 1em solid $timeline-item;
@@ -127,7 +131,11 @@
                     border-top: 1px solid lighten($timeline-item-inverted, 5%);
                 }
                 & a {
+                    transition : all 0.3s;
                     color: #601010;
+                    &:hover {
+                        color: #3c0d0d
+                    }
                 }
                 &::before {
                     border-top: 1em solid $timeline-item-inverted;
@@ -169,7 +177,11 @@
                         border-top: 1px solid lighten($timeline-item, 5%);
                     }
                     & a {
+                        transition : all 0.3s;
                         color: #1759a2;
+                        &:hover {
+                            color: #10376a;
+                        }
                     }
                     &::before {
                         border-top: 1em solid $timeline-item;
@@ -184,7 +196,11 @@
                         border-top: 1px solid lighten($timeline-item-inverted, 5%);
                     }
                     & a {
+                        transition : all 0.3s;
                         color: #601010;
+                        &:hover {
+                            color: #3c0d0d
+                        }
                     }
                     &::before {
                         border-top: 1em solid $timeline-item-inverted;
@@ -216,7 +232,11 @@
                         border-top: 1px solid lighten($timeline-item, 5%);
                     }
                     & a {
+                        transition : all 0.3s;
                         color: #1759a2;
+                        &:hover {
+                            color: #10376a;
+                        }
                     }
                     &::before {
                         border-top: 0;
@@ -234,7 +254,11 @@
                         border-top: 1px solid lighten($timeline-item-inverted, 5%);
                     }
                     & a {
+                        transition : all 0.3s;
                         color: #601010;
+                        &:hover {
+                            color: #3c0d0d
+                        }
                     }
                     &::before {
                         border-top: 0;

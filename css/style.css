@@ -1,3 +1,4 @@
+@import url(animate.css);
 body {
   background: url("../img/pattern.svg");
   background-size: cover;
@@ -159,5 +160,95 @@ header {
 
 .container {
   margin-top: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.conversation {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .conversation .message {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px; }
+    .conversation .message .profile-pic {
+      display: inline-block;
+      width: 50px;
+      height: 50px; }
+    .conversation .message .message-content {
+      width: calc(100% - 105px);
+      display: flex; }
+      .conversation .message .message-content p {
+        margin: auto 0;
+        padding: 20px; }
+    .conversation .message:nth-of-type(2n) .message-content {
+      padding-left: 20px;
+      margin-right: 40px;
+      color: white;
+      background: #00acc1;
+      border: 1px solid #28e8ff; }
+      .conversation .message:nth-of-type(2n) .message-content a {
+        color: #002428; }
+      .conversation .message:nth-of-type(2n) .message-content::after, .conversation .message:nth-of-type(2n) .message-content ::before {
+        top: 21px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        z-index: 9999;
+        right: 71px; }
+      .conversation .message:nth-of-type(2n) .message-content::after {
+        border-color: rgba(136, 183, 213, 0);
+        border-left-color: #00acc1;
+        border-width: 12px;
+        margin-top: -12px; }
+      .conversation .message:nth-of-type(2n) .message-content::before {
+        border-color: rgba(194, 225, 245, 0);
+        border-left-color: #00d9f4;
+        border-width: 13px;
+        margin-top: -13px; }
+    .conversation .message:nth-of-type(2n+1) .message-content {
+      margin-left: 40px;
+      padding-left: 20px;
+      color: white;
+      background: #e57373;
+      border: 1px solid #f5c9c9; }
+      .conversation .message:nth-of-type(2n+1) .message-content a {
+        transition: all 0.3s;
+        color: #761616;
+        font-weight: 700; }
+        .conversation .message:nth-of-type(2n+1) .message-content a:hover {
+          color: black; }
+      .conversation .message:nth-of-type(2n+1) .message-content::after, .conversation .message:nth-of-type(2n+1) .message-content ::before {
+        top: 21px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        z-index: 9999;
+        left: 68px; }
+      .conversation .message:nth-of-type(2n+1) .message-content::after {
+        border-color: rgba(136, 183, 213, 0);
+        border-right-color: #e57373;
+        border-width: 12px;
+        margin-top: -12px; }
+      .conversation .message:nth-of-type(2n+1) .message-content::before {
+        border-color: rgba(194, 225, 245, 0);
+        border-right-color: #ed9e9e;
+        border-width: 13px;
+        margin-top: -13px; }
+    .conversation .message img {
+      border-radius: 100%; }
+    .conversation .message.omar {
+      flex-direction: row; }
+
+.action-message {
+  text-align: center;
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=style.css.map */

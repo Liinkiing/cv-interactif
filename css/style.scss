@@ -1,8 +1,6 @@
 $timeline-item: #00acc1;
 $timeline-item-inverted: #e57373;
 
-
-
 body {
     background: url('../img/pattern.svg');
     background-size: cover;
@@ -164,7 +162,6 @@ footer a {
     font-size: 13px;
 }
 
-
 .blue {
     color: #428bca;
 }
@@ -192,9 +189,9 @@ header {
         padding: 24px 24px 24px 200px;
         background-color: rgba(255, 255, 255, 0.7);
 
-        & .profile-picture{
+        & .profile-picture {
             background: transparent;
-            line-height:50px;
+            line-height: 50px;
 
         }
 
@@ -206,8 +203,159 @@ header {
 
 }
 
-.container{
+.container {
     margin-top: 0;
 }
 
+@import "animate.css";
+@import "components/timelify/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+.conversation {
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    & .message {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 20px;
+
+        & .profile-pic {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        & .message-content {
+            width: calc(100% - 105px);
+            display: flex;
+            & p {
+                margin: auto 0;
+                padding: 20px;
+
+            }
+        }
+
+        &:nth-of-type(2n) {
+
+
+            & .message-content {
+                padding-left: 20px;
+
+                margin-right: 40px;
+                color: white;
+                background: $timeline-item;
+
+
+                border: 1px solid lighten($timeline-item, 20%);
+
+                & a {
+                    color: darken($timeline-item, 30%);
+                }
+
+                &::after, ::before {
+                    top: 21px;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    z-index: 9999;
+                    right: 71px;
+                }
+
+                &::after {
+                    border-color: rgba(136, 183, 213, 0);
+                    border-left-color: $timeline-item;
+                    border-width: 12px;
+                    margin-top: -12px;
+                }
+
+                &::before {
+
+                    border-color: rgba(194, 225, 245, 0);
+                    border-left-color: lighten($timeline-item, 10%);
+                    border-width: 13px;
+                    margin-top: -13px;
+
+                }
+
+            }
+
+        }
+
+        &:nth-of-type(2n+1) {
+            & .message-content {
+                margin-left: 40px;
+                padding-left: 20px;
+
+                color: white;
+                background: $timeline-item-inverted;
+                border: 1px solid lighten($timeline-item-inverted, 20%);
+
+                & a {
+                    transition: all 0.3s;
+                    color: darken($timeline-item-inverted, 40%);
+                    font-weight: 700;
+                    &:hover {
+                        color: darken($timeline-item-inverted, 70%);
+                    }
+                }
+
+                &::after, ::before {
+                    top: 21px;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    z-index: 9999;
+                    left: 68px;
+                }
+
+                &::after {
+                    border-color: rgba(136, 183, 213, 0);
+                    border-right-color: $timeline-item-inverted;
+                    border-width: 12px;
+                    margin-top: -12px;
+                }
+
+                &::before {
+
+                    border-color: rgba(194, 225, 245, 0);
+                    border-right-color: lighten($timeline-item-inverted, 10%);
+                    border-width: 13px;
+                    margin-top: -13px;
+
+                }
+            }
+
+        }
+
+        & img {
+            border-radius: 100%;
+        }
+
+        &.omar {
+            flex-direction: row;
+
+        }
+    }
+
+}
+
+.action-message {
+
+    text-align: center;
+    margin-bottom: 40px;
+
+}
 
