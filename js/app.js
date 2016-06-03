@@ -1,9 +1,13 @@
 var main = function () {
 
+	$(this).scrollTop(0);
+
+	var header = $('header');
+	var messages = $('.conversation .message, .action-message');
+
 
 	$(document).scroll(function () {
 		var scrollPos = $(window).scrollTop();
-		var header = $('header');
 		if (scrollPos > 50) {
 			$(header).addClass('collapsed');
 			$('header .hidden.col-sm-8').removeClass('hidden')
@@ -16,7 +20,6 @@ var main = function () {
 	});
 
 	$('#openConv').click(function(e) {
-		var messages = $('.conversation .message, .action-message');
 		var i = 100;
 		$(messages).each(function(){
 			i += 250;
@@ -38,7 +41,7 @@ var main = function () {
 		animRight: "fadeInRight",
 		animCenter: "fadeInUp",
 		animSpeed: 600,
-		offset: 150
+		offset: 300
 	});
 
 
