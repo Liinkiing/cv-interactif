@@ -19,7 +19,7 @@ var main = function () {
 		var messages = $('.conversation .message, .action-message');
 		var i = 100;
 		$(messages).each(function(){
-			i += 300;
+			i += 250;
 			$(this).addClass('animated');
 			if($(this).index() == messages.length){
 				$(this).prev().addClass('animated').addClass('fadeInUp').css({"animation-delay" : i + "ms", "animation-duration": "1500ms"})
