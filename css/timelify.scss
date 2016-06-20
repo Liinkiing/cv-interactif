@@ -74,7 +74,7 @@
                 font-weight: 700;
             }
 
-            & time::before {
+            & .time::before {
                 font-family: FontAwesome, sans-serif;
                 content: '\f017';
                 margin-right: 10px;
